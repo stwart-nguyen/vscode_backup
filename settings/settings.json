@@ -1,0 +1,74 @@
+{
+    "editor.multiCursorModifier": "alt",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSaveTimeout": 3000,
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Material Theme High Contrast",
+    "window.zoomLevel": 0,
+    "[ruby]": {
+        "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "files.associations": {
+        "js.erb": "javascript",
+        "html.erb": "html"
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true, // Must be placed after `trimFinalNewlines`
+    // == createTestFile extension
+    "createTestFile.nameTemplate": "{filename}_spec", // If file is named foo.bar, will create test named foo_spec.bar
+    "createTestFile.pathMaps": [
+        {
+            // Defines rule such that any file under app/ will have a test file created under spec/
+            // Rules will be applied in the order they are defined. The first rule to match the file path will be used.
+            "pathPattern": "app(/.*)?", // Regex file path matcher
+            "testFilePath": "spec$1" // $1, $2, etc. will be replaced with the matching text from the pathPattern
+        }
+    ],
+    // == Rails
+    "rails.viewFileExtension": "html.slim",
+    "rails.appDir": "~/Workspace/wowee",
+    "ruby.linter.run": "onSave",
+    "ruby.format": "rubocop",
+    "ruby.lint": {
+        "reek": true
+    },
+    "ruby.rubocop.onSave": true,
+    "ruby.rubocop.executePath": "",
+    // You can use specific path
+    // "ruby.rubocop.executePath": "/Users/you/.rbenv/shims/"
+    // "ruby.rubocop.executePath": "/Users/you/.rvm/gems/ruby-2.3.2/bin/"
+    // "ruby.rubocop.executePath": "D:/bin/Ruby22-x64/bin/"
+    // If not specified, it assumes a null value by default.
+    "ruby.rubocop.configFilePath": "/Users/stewart/.rubocop.yml",
+    "ruby.locate": {
+        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+        "include": "**/*.rb"
+    },
+    // default true
+    "ruby.useLanguageServer": true,
+    "sassFormat.useSingleQuotes": true,
+    "sassFormat.indent": 2,
+    "ruby.intellisense": "rubyLocate",
+    "ruby.codeCompletion": "rcodetools",
+    "git.ignoreMissingGitWarning": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "browser-preview.startUrl": "",
+    "editor.minimap.enabled": false,
+    "workbench.editor.showTabs": true,
+    "runOnSave.commands": [],
+    "explorer.confirmDelete": false,
+    "beautify.language": {
+        "js": {
+            "ext": [
+                "json"
+            ]
+        }
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.columnSelection": false,
+    "http.proxyAuthorization": null,
+    "solargraph.useBundler": true,
+    "tabnine.experimentalAutoImports": true,
+}
